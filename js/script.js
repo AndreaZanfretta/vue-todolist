@@ -24,14 +24,16 @@ const container = new Vue({
         },
         remove(index){
             /* this.listaSpesa[index].done = true; */
-            this.listaSpesa.splice(index, index + 1)
+            this.listaSpesa.splice(index, 1)
+            console.log(index, 1)
         },
         aggiungi(){
             const nuovaCosa = {
                 text: this.articolo,
                 done: false,
             }
-            this.listaSpesa.push(nuovaCosa)
+            this.listaSpesa.push(nuovaCosa);
+            this.articolo = "";
         },
     },
 })
