@@ -19,7 +19,17 @@
                 <h1>Lista Della Spesa:</h1>
             </div>
             <div id="to-do">
-                
+                <p v-if="listaSpesa.length === 0" class="empty">Hai tutto quello che ti serve!</p>
+                <ul>
+                    <li v-for="(articolo, index) in listaSpesa">
+                        <p @click="preso(index)" :class="listaSpesa[index].done === true ? 'lined' : '' ">{{articolo.text}}</p>
+                        <span id="erase" @click="remove(index)" >X</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="add">
+                <input type="text" v-model="articolo" placeholder="Cosa vuoi aggiungere" @keyup.enter="aggiungi">
+                <button @click="aggiungi">aggiungi</button>
             </div>
 
         </div>

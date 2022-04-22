@@ -28,3 +28,65 @@
     margin-top: 90px;
     border-bottom: 1px solid black;
 }
+#to-do{
+    height: calc(80% - 90px);
+}
+ul{
+    list-style: none;
+}
+li{
+        position: relative;
+}
+.style{
+    font-size: 30px;
+    margin-left: 20px;
+}
+li p{
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 20px;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+#check{
+    display: inline-block;
+}
+.line{
+    width: 20%;
+    height: 3px;
+    position: absolute;
+    top: 31px;
+    left: 0;
+    background-color: black;
+    z-index: 100;
+}
+.lined{
+    text-decoration: underline;
+}
+#line{
+    display: inline-block;
+}
+span{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid black;
+    margin-left: 10px;
+    font-size: 20px;
+}
+#erase{
+    display: inline-block;
+}
+.add{
+    width: 210px;
+    margin: 10px auto;
+}
+.empty{
+    font-size: 40px;
+    text-align: center;
+}
