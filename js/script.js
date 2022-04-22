@@ -19,7 +19,8 @@ const container = new Vue({
     },
     methods: {
         preso(index){
-            this.listaSpesa[index].done = true;
+            this.listaSpesa[index].done === false ? this.listaSpesa[index].done = true : this.listaSpesa[index].done = false ;
+            console.log(this.listaSpesa[index].done)
         },
         remove(index){
             /* this.listaSpesa[index].done = true; */
